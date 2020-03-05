@@ -1,61 +1,26 @@
 .bordersize(use, @size: 24px) {
     border-width: @size;
-}
-
-.border_07(top, @color: blue) {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    border-style: solid;
-    border-color: transparent transparent transparent @color;
-}
-/* dfghj */
-.border_07(bottom, @color: blue) {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    border-style: solid;
-    border-color: @color transparent transparent transparent;
-}
-
-.border_07(left, @color: blue) {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    border-style: solid;
-    border-color: transparent @color transparent transparent;
-}
-
-.border_07(right, @color: blue) {
-    width: 0;
-    height: 0;
-
-    overflow: hidden;
-
-    border-style: solid;
-
-    border-color: transparent transparent @color transparent;
-
-}
+} /* 匹配函数 */
 
 div {
-    .border_07(top);
-    .bordersize(use, 48px);
+    .bordersize(use, 48px); /* 匹配函数调用 */
 }
-.p() {
-    width: 0;
-    height:0;
+
+.fa {
+  width: calc(100% - 20px);
 }
-.aside(@color: rgba(255, 0, 0, 0.205)) {
-    border: 1px solid #000;
-    border-width: 24px 12px 0px 0px;
-    border-color: transparent transparent black;
+.aside(@color: red) {
     background-color: @color;
-    .p;
+    &:extend(.fa); /* 继承 */
+    &:hover{ /* 父选择器 */
+      background-color: #fff;
+    }
 }
-aside {
-    .aside();
+@pos: left; /* 自定义变量 */
+.aside-@{pos} { /* 插值 */
+    .aside(); /* 调用函数嵌套样式 */
 }
+
 
 
 .box {@media not all and (min-width: 3px) { width: 20px}}
