@@ -1,0 +1,1 @@
+.box{/*! 这段话将被编译输出(即使压缩) */border-left:24px solid red;font:16px/24px;font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;font-weight:bold}.box-left{background-color:orange}.box-left{color:blue}

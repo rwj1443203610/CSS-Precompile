@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.box {
+  /*! 这段话将被编译输出(即使压缩) */
+  /* 自定义变量 */
+  border-left: 24px solid red;
+  /* 插值 + 计算 */
+  font: 16px/24px;
+  /* 嵌套 */
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.box-left {
+  /* 父选择器& */
+  /* %占位符、继承 与原选择器合并 */
+  /* 混合继承 */
+  background-color: orange;
+  /* 混入fa */
+}
+
+.box-left {
+  color: blue;
+}

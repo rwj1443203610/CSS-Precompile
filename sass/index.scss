@@ -1,0 +1,26 @@
+
+@mixin fa($cl: red) {  /* 混合继承 */
+  background-color: $cl;
+}
+
+.box {      /*! 这段话将被编译输出(即使压缩) */
+            // 这段话不会被编译输出
+  $foo: 20px; /* 自定义变量 */
+  $bar: left;
+  border-#{$bar}: $foo + 4px solid red; /* 插值 + 计算 */
+  font: 16px/24px {   /* 嵌套 */
+    family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    weight: bold;
+  };
+
+  &-left {  /* 父选择器& */
+    @extend %fa; /* %占位符、继承 与原选择器合并 */
+
+    @include fa(orange) /* 混入fa */
+  }
+}
+
+$color: blue;
+%fa {
+  color: $color;
+}
