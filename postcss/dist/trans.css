@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(214, 71, 71);
+    height: 2000px;
+}
+html::-webkit-scrollbar {
+    width: 20px;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: rgba(168, 25, 25, 0.329);
+    border-radius: 50%;
+}
+div {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(20%, red),
+            color-stop(20%, blue));
+    background-image: -webkit-linear-gradient(left top, red 20%,
+            blue 20%);
+    background-image: -moz-linear-gradient(left top, red 20%,
+            blue 20%);
+    background-image: -o-linear-gradient(left top, red 20%,
+            blue 20%);
+    background-image: linear-gradient(to right bottom, red 20%,
+            blue 20%);
+    color: blueviolet;
+    font-size: 40px/1.5;
+    overflow: hidden;
+    position: relative;
+    top: -webkit-calc(50% -150px);
+    top: -moz-calc(50% -150px);
+    top: calc(50% -150px);
+    left: -webkit-calc(50%-150px);
+    left: -moz-calc(50%-150px);
+    left: calc(50%-150px);
+    -webkit-clip-path: polygon(0 0, 0 85px, 85px 85px);
+            clip-path: polygon(0 0, 0 85px, 85px 85px);
+}

@@ -1,0 +1,61 @@
+.bordersize(use, @size: 24px) {
+    border-width: @size;
+}
+
+.border_07(top, @color: blue) {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-style: solid;
+    border-color: transparent transparent transparent @color;
+}
+/* dfghj */
+.border_07(bottom, @color: blue) {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-style: solid;
+    border-color: @color transparent transparent transparent;
+}
+
+.border_07(left, @color: blue) {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-style: solid;
+    border-color: transparent @color transparent transparent;
+}
+
+.border_07(right, @color: blue) {
+    width: 0;
+    height: 0;
+
+    overflow: hidden;
+
+    border-style: solid;
+
+    border-color: transparent transparent @color transparent;
+
+}
+
+div {
+    .border_07(top);
+    .bordersize(use, 48px);
+}
+.p() {
+    width: 0;
+    height:0;
+}
+.aside(@color: rgba(255, 0, 0, 0.205)) {
+    border: 1px solid #000;
+    border-width: 24px 12px 0px 0px;
+    border-color: transparent transparent black;
+    background-color: @color;
+    .p;
+}
+aside {
+    .aside();
+}
+
+
+.box {@media not all and (min-width: 3px) { width: 20px}}

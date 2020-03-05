@@ -1,0 +1,22 @@
+/* dfghj */
+div {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-style: solid;
+  border-color: transparent transparent transparent blue;
+  border-width: 48px;
+}
+aside {
+  border: 1px solid #000;
+  border-width: 24px 12px 0px 0px;
+  border-color: transparent transparent black;
+  background-color: rgba(255, 0, 0, 0.205);
+  width: 0;
+  height: 0;
+}
+@media not all and (min-width: 3px) {
+  .box {
+    width: 20px;
+  }
+}
